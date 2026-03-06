@@ -1,0 +1,68 @@
+post http://localhost:3000/register
+Content-Type: application/json 
+
+{
+    "username":"raghuram",
+    "email":"raghurammallimoggala@gmail.com",
+    "password":"raghuram@123",
+    "gender":"male",
+    "location":"koti"
+
+}
+
+### 
+
+post http://localhost:3000/login
+Content-Type: application/json 
+
+{
+    "email":"raghurammallimoggala@gmail.com",
+    "password":"raghuram@123"
+}
+
+###  
+
+post http://localhost:3000/forgot-password
+Content-Type: application/json
+
+{
+    "email":"raghurammallimoggala@gmail.com",
+    "newPassword":"raghuram@890"
+}
+
+###  
+
+post http://localhost:3000/transactions
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhZ2h1cmFtIiwidXNlcklkIjo5LCJpYXQiOjE3NzE5NDc1ODl9.a6OJoljyr58_Xluki0-EFBlHybweTUUTtRoeYl1Hyhc
+
+{ 
+    "title":"Grocery Shopping",
+    "amount":"500",
+    "category":"Food",
+    "date":"2024-01-15",
+    "notes":"Weekly grocery shopping"
+}
+
+###    
+
+get http://localhost:3000/transactions?search=Grocery&category=food&minAmount=100&maxAmount=500&from=2024-01-01&to=2024-01-31
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhZ2h1cmFtIiwidXNlcklkIjo5LCJpYXQiOjE3NzE5NDc1ODl9.a6OJoljyr58_Xluki0-EFBlHybweTUUTtRoeYl1Hyhc
+### 
+
+put                 
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhZ2h1cmFtIiwidXNlcklkIjo5LCJpYXQiOjE3NzE5NDc1ODl9.a6OJoljyr58_Xluki0-EFBlHybweTUUTtRoeYl1Hyhc
+
+{ 
+    "title":"Grocery Shopping",
+    "amount":"600",
+    "category":"Food",
+    "date":"2024-01-15",
+    "notes":"Weekly grocery shopping with some extra items"
+}
+
+###  
+
+DELETE http://localhost:3000/transactions/9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhZ2h1cmFtIiwidXNlcklkIjoxLCJpYXQiOjE3NzE1MTU3Mjh9.kU__T0j2sN-Xq1U1rAfuKfk3nk3xv00J4DKrbGDnMUo
