@@ -229,7 +229,13 @@ export default defineConfig([
                       - Express.js
                       - Sqlite 
                       - JWT 
-                      - bcrypt 
+                      - bcrypt   
+
+## frontend Deploy:
+       vercel : https://user-transaction-ochre.vercel.app/ 
+
+## backend Deploy:
+       Render :
                       
 
 
