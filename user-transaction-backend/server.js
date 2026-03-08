@@ -1,15 +1,10 @@
 require("dotenv").config();
-
-if (!process.env.MY_SECRET_KEY) {
-    console.error("ERROR: JWT secret key (MY_SECRET_KEY) is missing in .env!");
-    process.exit(1); // Stop server until secret is defined
-}
 const express =require("express");
 const cors= require("cors");
 const path= require("path");
 const bcrypt= require("bcrypt");
 const {open}= require("sqlite");
-const sqlite3 = require("sqlite3");
+const sqlite3 = require("sqlite3").verbose();
 const jwt =require("jsonwebtoken");
 
 const app= express();
