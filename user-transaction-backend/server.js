@@ -32,6 +32,10 @@ const initializeDbAndServer= async()=>{
 }
 initializeDbAndServer(); 
 
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully");
+});
+
 const validatePassword=(password)=>{
     return password.length >=6;
 }
